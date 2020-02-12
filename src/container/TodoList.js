@@ -40,8 +40,12 @@ class TodoList extends React.Component {
           BUTTON
         </button>
         <div>TodoList</div>
-        {dataList.map((data) => (
-          <TodoItem aaa={data.title} content={data.content} />
+        {dataList.map((data, i) => (
+          <TodoItem
+            key={`${data.title}${`-${i}`}`}
+            aaa={data.title}
+            content={data.content}
+          />
         ))}
       </>
     );
